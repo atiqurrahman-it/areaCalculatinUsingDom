@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- bootstrap stylesheet -->
+    <link rel="stylesheet" href="external/css/bootstrap.min.css" />
+    <title>Geometry Genius</title>
+    <!-- custom style stylesheet -->
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary mb-5">
+        <div class="container">
+          <div class="">
+            <h4 class="fs-2 fw-bold">Interactive</h4>
+            <a class="navbar-brand fs-1 opacity-25" href="#">Geometry Genius</a>
+          </div>
+
+          <div class="ms-auto">
+            <button
+              onclick="window.location.href='base.html'"
+              hrf="base.html"
+              class="btn btn-primary px-5"
+            >
+              Blog
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-7 offset-md-1">
+            <div id="change_colorBtn">
+              <h1 class="d-inline mx-2">backgroundColor</h1>
+              <input
+                class="mb-5"
+                type="color"
+                value="#f6f82"
+                id="colorPicker"
+              />
+            </div>
+
+            <div class="row row-cols-1 row-cols-md-3 g-2 g-lg-4 imageShape">
+              <div class="col mb-5">
+                <div class="card border-0 py-3 randomColorChange">
+                  <img
+                    src="images/triangle.png"
+                    class="card-img-top img-fluid mx-auto"
+                    alt="Image Not Found"
+                  />
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Triangle</h5>
+                    <p class="card-text">
+                      Area (A) = 0.5 <span>&#215;</span>
+                      <span id="setTriangleBaseValue">b</span> &#215;
+                      <span id="setTriangleHightValue">h</span>
+                    </p>
+                    <div class="w-100 my-3">
+                      <input
+                        id="triangleBaseInputId"
+                        type="text"
+                        class="w-25 border-0 ps-2 me-1"
+                        value=""
+                        placeholder="b"
+                      />
+                      cm
+
+                      <input
+                        id="triangleHightInputId"
+                        class="w-25 border-0 ps-2 me-1"
+                        type="text"
+                        value=""
+                        placeholder="h"
+                      />cm
+                    </div>
+                    <a href="#" id="triangleBtn" class="btn btn-primary w-100"
+                      >Calculate</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col mb-5">
+                <div class="card border-0 py-3 randomColorChange">
+                  <img
+                    src="images/rectangle.png"
+                    class="card-img-top img-fluid mx-auto"
+                    alt="Image Not Found"
+                  />
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Rectangle</h5>
+                    <p class="card-text">
+                      Area (A) =
+                      <span id="setRectangleWidthValue">W</span> &#215;
+                      <span id="setRectangleLengthValue">l</span>
+                    </p>
+                    <div class="w-100 my-3">
+                      <input
+                        id="rectangleWidthInputId"
+                        type="text"
+                        class="w-25 border-0 ps-2 me-1"
+                        value=""
+                        placeholder="w"
+                      />
+                      cm
+
+                      <input
+                        id="rectangleLengthInputId"
+                        class="w-25 border-0 ps-2 me-1"
+                        type="text"
+                        value=""
+                        placeholder="l"
+                      />cm
+                    </div>
+                    <a href="#" id="rectangleBtn" class="btn btn-primary w-100"
+                      >Calculate</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col mb-5">
+                <div class="card border-0 py-3 randomColorChange">
+                  <img
+                    src="images/parallelogram.png"
+                    class="card-img-top img-fluid mx-auto"
+                    alt="Image Not Found"
+                  />
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Parallelogram</h5>
+                    <p class="card-text">
+                      Area (A) =<span id="setParallelogramBaseValue">b</span>
+                      &#215; <span id="setParallelogramHightValue">h</span>
+                    </p>
+                    <div class="w-100 my-3">
+                      <input
+                        id="parallelogramBaseInputId"
+                        type="text"
+                        class="w-25 border-0 ps-2 me-1"
+                        value=""
+                        placeholder="b"
+                      />
+                      cm
+
+                      <input
+                        id="parallelogramHightInputId"
+                        class="w-25 border-0 ps-2 me-1"
+                        type="text"
+                        value=""
+                        placeholder="h"
+                      />cm
+                    </div>
+                    <a
+                      href="#"
+                      id="parallelogramBtn"
+                      class="btn btn-primary w-100"
+                      >Calculate</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col mb-5">
+                <div class="card border-0 py-3 randomColorChange">
+                  <img
+                    src="images/rhombus.png"
+                    class="card-img-top img-fluid mx-auto"
+                    alt="Image Not Found"
+                  />
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Rhombus</h5>
+                    <p class="card-text">
+                      Area (A) = 0.5 &#215;
+                      <span id="setRhombusDiagonal_1Value">d<sub>1</sub></span>
+                      &#215;
+                      <span id="setRhombusDiagonal_2Value">d<sub>2</sub> </span>
+                    </p>
+                    <div class="w-100 my-3">
+                      <input
+                        id="rhombusDiagonal_1InputId"
+                        type="text"
+                        class="w-25 border-0 ps-2 me-1"
+                        value=""
+                        placeholder="d1"
+                      />
+                      cm
+
+                      <input
+                        id="rhombusDiagonal_2InputId"
+                        class="w-25 border-0 ps-2 me-1"
+                        type="text"
+                        value=""
+                        placeholder="d2"
+                      />cm
+                    </div>
+                    <a href="#" id="RhombusBtn" class="btn btn-primary w-100"
+                      >Calculate</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col mb-5">
+                <div class="card border-0 py-3 randomColorChange">
+                  <img
+                    src="images/pentagon.png"
+                    class="card-img-top img-fluid mx-auto"
+                    alt="Image Not Found"
+                  />
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Pentagon</h5>
+                    <p class="card-text">
+                      Area (A) =0.5 &#215;
+                      <span id="setPentagonPerimeterValue">p</span> &#215;
+                      <span id="setPentagonAreaInputValue">b</span>
+                    </p>
+                    <div class="w-100 my-3">
+                      <input
+                        id="pentagonPerimeterInputId"
+                        type="text"
+                        class="w-25 border-0 ps-2 me-1"
+                        value=""
+                        placeholder="p"
+                      />
+                      cm
+
+                      <input
+                        id="pentagonAreaInputId"
+                        class="w-25 border-0 ps-2 me-1"
+                        type="text"
+                        value=""
+                        placeholder="b"
+                      />cm
+                    </div>
+                    <a href="#" id="PentagonBtn" class="btn btn-primary w-100"
+                      >Calculate</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col mb-5">
+                <div class="card border-0 py-3 randomColorChange">
+                  <img
+                    src="images/ellipse.png"
+                    class="card-img-top img-fluid mx-auto"
+                    alt="Image Not Found"
+                  />
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Ellipse</h5>
+                    <p class="card-text">
+                      Area (A) = &#960;
+                      <span id="setEllipseAxisValue">a</span> &#215;
+                      <span id="setEllipseB_xisValue">b</span>
+                    </p>
+                    <div class="w-100 my-3">
+                      <input
+                        id="ellipse_AxisInputId"
+                        type="text"
+                        class="w-25 border-0 ps-2 me-1"
+                        value=""
+                        placeholder="a"
+                      />
+                      cm
+
+                      <input
+                        id="ellipse_B_xisInputId"
+                        class="w-25 border-0 ps-2 me-1"
+                        type="text"
+                        value=""
+                        placeholder="b"
+                      />cm
+                    </div>
+                    <a href="#" id="ellipseBtn" class="btn btn-primary w-100"
+                      >Calculate</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <h5 class="text-decoration-underline">Area Calculation</h5>
+
+            <table class="table">
+              <tbody id="tables"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="external/js/bootstrap.min.js"></script>
+
+    <script src="js/function.js"></script>
+    <script src="js/geometry.js"></script>
+    <script src="js/randomBackgroundColor.js"></script>
+  </body>
+</html>

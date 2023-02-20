@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom</title>
+    <!-- bootstrap stylesheet -->
+    <link rel="stylesheet" href="external/css/bootstrap.min.css" />
+    <!-- custom style stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 class="text-center py-2">Document Object Model (DOM)</h1>
+    <main class="container">
+      <button onclick="history.back()" class="btn btn-success py-1 px-5 mb-3">
+        Back
+      </button>
+
+      <div class="accordion" id="accordionPanelsStayOpenExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseOne"
+              aria-expanded="true"
+              aria-controls="panelsStayOpen-collapseOne"
+            >
+              What is callback function
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapseOne"
+            class="accordion-collapse collapse"
+            aria-labelledby="panelsStayOpen-headingOne"
+          >
+            <div class="accordion-body">
+              A callback is a function passed as an argument to another function
+              <br />
+              <br />
+              <strong>example</strong> <br />
+              function sample (a,b,cb){ <br />
+              var c=a+b; <br />
+              var d=a-b; <br />
+              var result=cb(c,d) <br />
+              return result; <br />
+              }
+              <br />
+              <br />
+              function sum(a,b){
+              <br />
+              return a+b <br />
+              }
+              <br />
+              <br />
+              var res=sample(5,8,sum)<br />
+              console.log(res) // output 10 <br /><br />
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseTwo"
+              aria-expanded="false"
+              aria-controls="panelsStayOpen-collapseTwo"
+            >
+              How to Select Element
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapseTwo"
+            class="accordion-collapse collapse"
+            aria-labelledby="panelsStayOpen-headingTwo"
+          >
+            <div class="accordion-body">
+              There are many selective component/Element methods. below the
+              Summary and Syntax <br /><br />
+              <strong>querySelector</strong>
+              The querySelector() method returns the first element that matches
+              a CSS selector.<br />
+
+              <strong>querySelectorAll</strong>
+              To return all matches use the querySelectorAll(). <br />
+
+              <strong>getElementById</strong>
+              The getElementById() method returns an element with a specified
+              value <br />
+
+              <strong>getElementsByClassName</strong>
+              The getElementsByClassName() method returns a collection of
+              elements with a specified class name(s).<br />
+
+              <strong>getElementsByName</strong>
+              he getElementsByName() method returns a collection of elements
+              with a specified name.<br />
+
+              <strong>getElementsByTagName</strong>
+              The getElementsByTagName() method returns a collection of all
+              elements with a specified tag name.<br />
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseThree"
+              aria-expanded="false"
+              aria-controls="panelsStayOpen-collapseThree"
+            >
+              What is Dom & what is purpose of Dom
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapseThree"
+            class="accordion-collapse collapse"
+            aria-labelledby="panelsStayOpen-headingThree"
+          >
+            <div class="accordion-body">
+              <strong>DOM</strong> (Document Object Model) is the basic
+              programming interface for web documents. <br />
+              Represents the content of xml or html document as tree structure
+              Can easily read, access, update the contents of the document Is a
+              programming interface (API)
+              <br />
+              <strong> purpose of Dom </strong><br />
+              You can use the DOM to select and manipulate elements on a web
+              page, such as changing their text content, modifying their
+              attributes, or adding and removing them from the page.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseFour"
+              aria-expanded="false"
+              aria-controls="panelsStayOpen-collapseFour"
+            >
+              What is Event Bubble
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapseFour"
+            class="accordion-collapse collapse"
+            aria-labelledby="panelsStayOpen-headingFour"
+          >
+            <div class="accordion-body">
+              It is one way that events are handled in the browser. Events are
+              actions done by the user such as a button click, changing a field
+              etc
+              <br />
+              <br />
+              when an event occurs in an element inside another element, and
+              both elements have registered a handle for that event. The event
+              propagation mode determines in which order the elements receive
+              the event
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="external/js/bootstrap.min.js"></script>
+  </body>
+</html>

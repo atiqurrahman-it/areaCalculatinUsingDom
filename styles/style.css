@@ -1,0 +1,9 @@
+.imageShape img {
+  max-width: 250px;
+  max-height: 120px;
+  padding: 0px 10px;
+}
+
+.myBoxShadow {
+  box-shadow: 0 0rem 1rem rgba(var(--bs-body-color-rgb), 1.175) !important;
+}
