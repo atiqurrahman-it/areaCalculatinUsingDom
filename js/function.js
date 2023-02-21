@@ -3,10 +3,12 @@ function areaCalculation(firstInputElementId,secondInputElementId,multiply=1){
     const secondInputElement=document.getElementById(secondInputElementId)
 
     const firstInputValueString=firstInputElement.value
+    // reset value 
     firstInputElement.value=''
     const secondInputValueString=secondInputElement.value
+     // reset value 
     secondInputElement.value=''
-
+    // call validation function 
     const inputValue=Validation(firstInputValueString,secondInputValueString)
 
     if(inputValue){
@@ -17,7 +19,7 @@ function areaCalculation(firstInputElementId,secondInputElementId,multiply=1){
         const firstInputValue=inputValue.firstInputValue
         const secondInputValue=inputValue.secondInputValue
 
-        const  area=multiply*inputValue.firstInputValue*secondInputValue
+        const  area=multiply*firstInputValue*secondInputValue
             const Area=myTofixed(area)
             const areaObject={
                 area:Area,
@@ -26,31 +28,6 @@ function areaCalculation(firstInputElementId,secondInputElementId,multiply=1){
                 secondInputValue
             }
             return areaObject
-
-        
-        // if(multiply===1){
-        //     const  area=firstInputValue*secondInputValue
-        //     const Area=myTofixed(area)
-        //     const areaObject={
-        //         area:Area,
-        //         firstInputValue:firstInputValue,
-        //         secondInputValue:secondInputValue
-        //     }
-        //     return areaObject
-        // } 
-        // else{
-        //     const  calculation_area=multiply*firstInputValue*secondInputValue
-        //     const Area=myTofixed(calculation_area)
-            
-        //     const areaObject={
-        //         area:Area,
-        //         firstInputValue:firstInputValue,
-        //         secondInputValue:secondInputValue
-        //     }
-        //     return areaObject
-
-        // }
-
     }
 }
 
