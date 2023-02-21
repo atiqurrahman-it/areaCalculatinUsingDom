@@ -2,41 +2,55 @@ function areaCalculation(firstInputElementId,secondInputElementId,multiply=1){
     const firstInputElement=document.getElementById(firstInputElementId)
     const secondInputElement=document.getElementById(secondInputElementId)
 
-  
     const firstInputValueString=firstInputElement.value
     firstInputElement.value=''
     const secondInputValueString=secondInputElement.value
     secondInputElement.value=''
 
-    const area=Validation(firstInputValueString,secondInputValueString)
+    const inputValue=Validation(firstInputValueString,secondInputValueString)
 
-    if(area){
-        const firstInputValue=parseFloat(firstInputValueString)
-        const secondInputValue=parseFloat(secondInputValueString)
+    if(inputValue){
+        // const firstInputValue=parseFloat(firstInputValueString)
+        // const secondInputValue=parseFloat(secondInputValueString)
 
-        
-        if(multiply===1){
-            const  area=firstInputValue*secondInputValue
+        // get input value 
+        const firstInputValue=inputValue.firstInputValue
+        const secondInputValue=inputValue.secondInputValue
+
+        const  area=multiply*inputValue.firstInputValue*secondInputValue
             const Area=myTofixed(area)
             const areaObject={
                 area:Area,
-                firstInputValue:firstInputValue,
-                secondInputValue:secondInputValue
-            }
-            return areaObject
-        } 
-        else{
-            const  calculation_area=multiply*firstInputValue*secondInputValue
-            const Area=myTofixed(calculation_area)
-            
-            const areaObject={
-                area:Area,
-                firstInputValue:firstInputValue,
-                secondInputValue:secondInputValue
+                // firstInputValue:firstInputValue, shortcut 
+                firstInputValue,
+                secondInputValue
             }
             return areaObject
 
-        }
+        
+        // if(multiply===1){
+        //     const  area=firstInputValue*secondInputValue
+        //     const Area=myTofixed(area)
+        //     const areaObject={
+        //         area:Area,
+        //         firstInputValue:firstInputValue,
+        //         secondInputValue:secondInputValue
+        //     }
+        //     return areaObject
+        // } 
+        // else{
+        //     const  calculation_area=multiply*firstInputValue*secondInputValue
+        //     const Area=myTofixed(calculation_area)
+            
+        //     const areaObject={
+        //         area:Area,
+        //         firstInputValue:firstInputValue,
+        //         secondInputValue:secondInputValue
+        //     }
+        //     return areaObject
+
+        // }
+
     }
 }
 
@@ -50,19 +64,21 @@ function myTofixed(number){
 function Validation(firstInputValueString,secondInputValueString){
     const firstInputValue=parseFloat(firstInputValueString)
     const secondInputValue=parseFloat(secondInputValueString)
-
+  
     if(firstInputValueString=='' || secondInputValueString==''){
-        alert('Please provide number !!')
-        console.log("Please provide number !!")
-    }else if( typeof firstInputValueString =='string' || typeof secondInputValueString=='string'){
-        alert("Please provide number")
+        alert('oops! something went wrong ..Please provide number !!')
     }
-    else if( isNaN(firstInputValue) || isNaN(secondInputValue)){
-        alert('Please provide number !! ')
-    }else if (firstInputValue <0 || secondInputValue< 0){
+    else if( isNaN(firstInputValueString) || isNaN(secondInputValueString)){
+        alert('Please provide number !! str ')
+    }
+    else if (firstInputValue <0 || secondInputValue< 0){
         alert('Please Enter Positive Number !!')
     }else {
-        return area=true
+        const inputValue={
+            firstInputValue,
+            secondInputValue
+        }
+        return inputValue
     }
 
 }
@@ -73,7 +89,6 @@ function setElementValueAreaFormula(setAreaFirstElementId,firstInputValue,setAre
     let secondSetElement=document.getElementById(setAreaSecondElementId)
     firstSetElement.innerText=firstInputValue
     secondSetElement.innerText=secondInputValue
-
 }
 
 
