@@ -1,4 +1,20 @@
 
+let header=document.getElementById('header')
+
+function getRandomRGB() {
+  const r = Math.floor(Math.random() * 256);
+  const g = Math.floor(Math.random() * 256);
+  const b = Math.floor(Math.random() * 256);
+  return `rgb(${r}, ${g}, ${b})`;
+}
+
+// Set an interval to change the background color every 5 seconds
+setInterval(() => {
+  header.style.backgroundColor = getRandomRGB();
+  console.log(header)
+}, 1500);
+
+
 // input user korte parie mouseleave er poriborte 
 
 document.getElementById('change_colorBtn').addEventListener('input',function(){
