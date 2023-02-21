@@ -61,9 +61,12 @@ function Validation(firstInputValueString,secondInputValueString){
 }
 
 //set element value  Area
-function setElementValueAreaFormula(setAreaFirstElementId,firstInputValue,setAreaSecondElementId,secondInputValue){
+function setElementValueAreaFormula(setAreaFirstElementId,firstInputValue,setAreaSecondElementId,secondInputValue,setAreaElementId,areaValue){
     let firstSetElement=document.getElementById(setAreaFirstElementId)
     let secondSetElement=document.getElementById(setAreaSecondElementId)
+
+    let areaSetElement=document.getElementById(setAreaElementId)
+    areaSetElement.innerText=areaValue.toFixed(2)
     firstSetElement.innerText=firstInputValue
     secondSetElement.innerText=secondInputValue
 }

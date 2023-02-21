@@ -9,11 +9,12 @@ document.getElementById('triangleBtn').addEventListener('click',function(){
     if(areaObject){
         const firstInputValue=areaObject.firstInputValue
         const secondInputValue=areaObject.secondInputValue
+        const area=areaObject.area
         // set value area element 
-        setElementValueAreaFormula('setTriangleBaseValue',firstInputValue,'setTriangleHightValue',secondInputValue)
+        setElementValueAreaFormula('setTriangleBaseValue',firstInputValue,'setTriangleHightValue',secondInputValue,'setTriangleAreaId',area)
 
         // show area calculation 
-        setElement(areaObject.area,"triangle")
+        setElement(area,"triangle")
     }
 })
 
@@ -27,11 +28,12 @@ document.getElementById('rectangleBtn').addEventListener('click',function(){
     if(areaObject){
         const firstInputValue=areaObject.firstInputValue
         const secondInputValue=areaObject.secondInputValue
+        const area=areaObject.area
         // set value area element 
-        setElementValueAreaFormula('setRectangleWidthValue',firstInputValue,'setRectangleLengthValue',secondInputValue)
+        setElementValueAreaFormula('setRectangleWidthValue',firstInputValue,'setRectangleLengthValue',secondInputValue,'setRectangleAreaId',area)
 
          // show area calculation 
-         setElement(areaObject.area,"rectangle")
+         setElement(area,"rectangle")
      
     }
 })
@@ -44,11 +46,12 @@ document.getElementById('parallelogramBtn').addEventListener('click',function(){
     if(areaObject){
         const firstInputValue=areaObject.firstInputValue
         const secondInputValue=areaObject.secondInputValue
+        const area=areaObject.area
         // set value area element 
-        setElementValueAreaFormula('setParallelogramBaseValue',firstInputValue,'setParallelogramHightValue',secondInputValue)
+        setElementValueAreaFormula('setParallelogramBaseValue',firstInputValue,'setParallelogramHightValue',secondInputValue,'setParallelogramAreaId',area)
 
           // show area calculation 
-          setElement(areaObject.area,"parallelogram")
+          setElement(area,"parallelogram")
      
     }
 
@@ -63,11 +66,12 @@ document.getElementById('RhombusBtn').addEventListener('click',function(){
     if(areaObject){
         const firstInputValue=areaObject.firstInputValue
         const secondInputValue=areaObject.secondInputValue
+        const area=areaObject.area
         // set value area element 
-        setElementValueAreaFormula('setRhombusDiagonal_1Value',firstInputValue,'setRhombusDiagonal_2Value',secondInputValue)
+        setElementValueAreaFormula('setRhombusDiagonal_1Value',firstInputValue,'setRhombusDiagonal_2Value',secondInputValue,'setRhombusAreaId',area)
 
         // show area calculation 
-        setElement(areaObject.area,"Rhombus")
+        setElement(area,"Rhombus")
     }
 
     
@@ -83,11 +87,12 @@ document.getElementById('PentagonBtn').addEventListener('click',function(){
     if(areaObject){
         const firstInputValue=areaObject.firstInputValue
         const secondInputValue=areaObject.secondInputValue
+        const area=areaObject.area
         // set value area element 
-        setElementValueAreaFormula('setPentagonPerimeterValue',firstInputValue,'setPentagonAreaInputValue',secondInputValue)
+        setElementValueAreaFormula('setPentagonPerimeterValue',firstInputValue,'setPentagonAreaInputValue',secondInputValue,'setPentagonAreaId',area)
 
         // show area calculation 
-        setElement(areaObject.area,"Pentagon")
+        setElement(area,"Pentagon")
      
     }
 })
@@ -102,11 +107,12 @@ document.getElementById('ellipseBtn').addEventListener('click',function(){
     if(areaObject){
         const firstInputValue=areaObject.firstInputValue
         const secondInputValue=areaObject.secondInputValue
+        const area=areaObject.area
         // set value area element 
-        setElementValueAreaFormula('setEllipseAxisValue',firstInputValue,'setEllipseB_xisValue',secondInputValue)
+        setElementValueAreaFormula('setEllipseAxisValue',firstInputValue,'setEllipseB_xisValue',secondInputValue,'setEllipseAreaId',area)
 
          // show area calculation 
-         setElement(areaObject.area,"ellipse")
+         setElement(area,"ellipse")
      
     }
 })
